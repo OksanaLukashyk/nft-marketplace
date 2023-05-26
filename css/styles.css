@@ -394,6 +394,10 @@ main {
   height: 52px;
 }
 
+.this-week-works-header > .see-all-btn {
+  margin-left: auto;
+}
+
 .works-list {
   display: flex;
   align-items: center;
@@ -514,11 +518,11 @@ main {
 .popular-artists-header {
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
-  justify-content: space-around;
-  gap: 786px;
-  /* padding-left: 32px;
-  padding-right: 32px; */
+  justify-content: space-between;
+  /* justify-content: space-around; */
+  /* gap: 750px; */
+  padding-left: 32px;
+  padding-right: 32px;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 64px;
@@ -527,6 +531,10 @@ main {
   width: 350px;
   margin-bottom: 0;
 }
+.popular-artists-header > .see-all-btn {
+  margin-left: auto;
+}
+
 .artists-gallery-wrp {
   display: flex;
   gap: 30px;
