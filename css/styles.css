@@ -59,11 +59,13 @@ body {
   /* margin: 0;
   padding-top: 104px; */
   background-color: var(--primary-background-body);
-  background-size: cover;
+  background-image: linear-gradient(rgba(2, 0, 23, 0.933), rgba(3, 0, 23, 0.92)),
+    url(../images/site-bg.jpg);
+  background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
-  /* for bg image
-background-attachment: scroll; */
+  background-attachment: scroll;
+
   color: var(--primary-text-color);
   font-family: "Inter", sans-serif;
   font-size: 16px;
