@@ -1,0 +1,458 @@
+/* Monserrat or Playfair instead of Canela */
+/* font-family: 'Inter', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Playfair', serif; */
+/* ===== Default Styles ===== */
+:root {
+  --accent-text-color: #ffffff;
+  --primary-text-color: #fffffd;
+  --primary-text-subtle: rgba(255, 255, 253, 0.72);
+  --accent-color: #d6ef0e;
+  --artist-card-backgroud: rgba(19, 30, 58, 0.92);
+  --form-background-color: #131e3a;
+  --primary-background-body: rgba(9, 15, 29, 1);
+  /* --primary-background-body: rgba(37, 37, 37, 1); */
+  --secondary-text-subtle: #838382;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+body {
+  /* margin: 0;
+  padding-top: 104px; */
+  background-color: var(--primary-background-body);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* for bg image
+background-attachment: scroll; */
+  color: var(--primary-text-color);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.container {
+  width: 1512px;
+  padding: 0 111px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 92px 0;
+}
+
+.button {
+  display: block;
+  padding: 12px 40px;
+  border-radius: 8px;
+  border: none;
+
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
+
+  color: var(--accent-text-color);
+
+  cursor: pointer;
+}
+
+.btn-yellow {
+  background-color: var(--accent-color);
+}
+.btn-transparent {
+  color: var(--accent-color);
+  background-color: transparent;
+  border: 1px solid var(--accent-color);
+}
+
+.button:hover,
+.button:focus {
+  outline: 2px solid var(--accent-text-color);
+}
+/* 
+.button.secondary:hover,
+.button.secondary:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+} */
+/* ===== End of Default Styles ===== */
+
+/* Header */
+
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: rgba(9, 15, 29, 1);
+
+  outline: 2px solid aqua;
+}
+
+/* Navigation */
+
+.main-site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-nav-item-link {
+  display: block;
+  /* position: relative; */
+  padding: 39px 0;
+  color: var(--primary-text-subtle);
+}
+
+.current {
+  color: var(--accent-text-color);
+}
+
+.header-nav-item-link:hover,
+.header-nav-item-link:focus {
+  color: var(--accent-color);
+}
+
+.current.header-nav-item-link::after {
+  content: "";
+  /* position: absolute; */
+  /* bottom: -1px; */
+
+  display: block;
+  padding: 0;
+
+  width: 100%;
+  height: 1px;
+  transform: translateY(-1px);
+
+  border: none;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.header-contact-btn {
+  margin-left: auto;
+  min-width: 143px;
+  height: 48px;
+}
+/* Header End */
+
+main {
+  margin-top: 104px;
+}
+
+/* Hero */
+.hero {
+  text-align: left;
+}
+
+.hero-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.hero-left-side {
+  max-width: 544px;
+}
+
+.hero-title {
+  margin-bottom: 20px;
+
+  /* font-family: "Playfair", serif; */
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 1.2;
+}
+
+.title-span {
+  color: var(--accent-color);
+}
+
+.hero-text {
+  margin-bottom: 40px;
+}
+
+.hero-button {
+  display: inline-block;
+  min-width: 178px;
+  height: 52px;
+}
+
+.hero-learn-more-link {
+  margin-left: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--primary-text-color);
+}
+
+.hero-learn-more-link:hover,
+.hero-learn-more-link:focus {
+  color: var(--accent-color);
+}
+
+.platform-stats-list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 72px;
+}
+
+.platform-stats-item {
+  position: relative;
+  /* display: flex;
+  align-items: center; */
+}
+
+.platform-stats-item:not(:first-child) {
+  padding-left: 94px;
+}
+
+.platform-stats-item:not(:first-child)::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  padding: 0;
+  margin: 0;
+
+  width: 1px;
+  height: 100%;
+  transform: translateX(1px);
+  border: none;
+  border-right: 1px solid var(--accent-color);
+}
+
+.platform-stats-item-value {
+  margin-bottom: 8px;
+
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 1.2;
+  color: var(--accent-color);
+}
+
+.platform-stats-item-value > span {
+  color: var(--primary-text-color);
+}
+
+.hero-right-side {
+  position: relative;
+  margin-left: 171px;
+  /* max-width: 575px; */
+  width: 575px;
+  height: 637px;
+
+  /* background-image: url(../images/hero-bg.jpg);
+  background-position: 50% 0;
+  background-repeat: no-repeat; */
+}
+
+.hero-image {
+  width: 464px;
+  height: 544px;
+  border-radius: 24px;
+  overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hero-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  /* transform: translate(0%, -50%); */
+  transform: translateY(-50%);
+}
+
+.hero-art-of-week {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  width: 304px;
+  height: 169px;
+  background: #1a2652;
+  border-top: 1px solid #d6ef0e;
+  box-shadow: 0px 9px 50px rgba(23, 36, 65, 0.04);
+  border-radius: 16px;
+}
+
+.current-week-bid {
+  /* background: 1A2652; */
+  display: flex;
+  /* gap: 191px; */
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.bid-end-title,
+.current-bid-title {
+  margin-bottom: 8px;
+  color: var(--accent-color);
+}
+
+.bid-timer,
+.bid-price {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-bid-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 264px;
+  height: 52px;
+}
+/*  outline: 1px solid tomato; */
+
+.section-title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+.this-week-works-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  /* gap: 650px; */
+  margin-bottom: 64px;
+}
+
+.this-week-works-header > .section-title {
+  width: 549px;
+}
+
+.see-all-btn {
+  display: inline-block;
+  min-width: 134px;
+  height: 52px;
+}
+
+.works-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.works-list-item {
+  flex-basis: calc((100%-60px) / 3);
+  padding: 20px;
+  background: #131e3a;
+  border-top: 1px solid #d6ef0e;
+  border-radius: 28px;
+}
+.works-image-wrapper {
+  width: 370px;
+  height: 340px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.works-bid-btn {
+  display: inline-block;
+  min-width: 168px;
+  height: 48px;
+  white-space: nowrap; /* Another way to prevent text-wrap? */
+}
+
+.wcw-header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+.wcw-content-subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.ethereum-wrap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.works-bid-placing {
+  display: flex;
+  align-items: center;
+  gap: 93px;
+}
+
+.works-bid-duration {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.works-bid-end {
+  margin-bottom: 4px;
+
+  font-size: 14px;
+  color: var(--secondary-text-subtle);
+}
+
+/* .works-bid-duration > .bid-timer {
+  margin-left: 12px;
+} */
